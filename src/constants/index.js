@@ -1,6 +1,7 @@
 import todo from "../assets/projects/todo.png";
 import yelpcamp from "../assets/projects/yelpcamp.png";
 import weather from "../assets/projects/weather.png";
+import echoes from "../assets/projects/echoes.png"
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications.I have imporving my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -23,8 +24,24 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
+    title: "Echoes",
+    image: echoes,
+    link:"https://github.com/aakif-ms/Echoes",
+    description:
+      "A memory app where users can upload images, add descriptions, and preserve their cherished moments securely. Users can revisit their memories anytime, keeping them organized and easily accessible. Perfect for storing special experiences, milestones, and nostalgic moments in a digital format.",
+    technologies: [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Express",
+      "JWT",
+      "MongoDB",
+    ],
+  },
+  {
     title: "YelpCamp",
     image: yelpcamp,
+    link:"https://github.com/aakif-ms/YelpCamp",
     description:
       "YelpCamp simulates a platform where users can create, review, and manage campgrounds. Built with Node.js, Express, and MongoDB, YelpCamp incorporates features such as user authentication, form handling, and interactive maps.",
     technologies: [
@@ -39,6 +56,7 @@ export const PROJECTS = [
   {
     title: "ToDo App",
     image: todo,
+    link:"https://github.com/aakif-ms/Task-Master",
     description:
       "A fully functional todo app where people can create account and make their own todos",
     technologies: [
@@ -53,6 +71,7 @@ export const PROJECTS = [
   {
     title: "Weather App",
     image: weather,
+    link:"https://github.com/aakif-ms/Weatherio",
     description:
       "A weather app made using openweather api which shows detailed weather information about location.",
     technologies: ["HTML", "CSS", "React"],

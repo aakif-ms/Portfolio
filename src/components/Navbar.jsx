@@ -9,9 +9,15 @@ export default function Navbar() {
         <h1 className="text-lg text-white mx-2 w-10">Aakif</h1>
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-        <FaLinkedin />
-        <FaGithub />
-        <SiLeetcode />
+        <a href="https://www.linkedin.com/in/aakif-mushtaq-siddiqui-267821294/">
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/aakif-ms?tab=repositories">
+          <FaGithub />
+        </a>
+        <a href="https://leetcode.com/u/aakif_msiddiqui/">
+          <SiLeetcode />
+        </a>
       </div>
     </nav>
   );
