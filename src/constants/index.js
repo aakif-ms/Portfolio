@@ -1,14 +1,16 @@
-import todo from "../assets/projects/todo.png";
-import yelpcamp from "../assets/projects/yelpcamp.png";
-import weather from "../assets/projects/weather.png";
-import echoes from "../assets/projects/echoes.png"
 import medimeet from "../assets/projects/medimeet.png"
 import whisper from "../assets/projects/Whisper.png"
-import foodvision from "../assets/projects/CNN.png"
+import repolens from "../assets/projects/repolens.png"
+import sentinel from "../assets/projects/sentinel.png"
 
-export const HERO_CONTENT = `I am a passionate full-stack developer with a knack for crafting robust and scalable web applications. I am continuously improving my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js and MongoDB. My expertise also extends to the exciting fields of machine learning and deep learning, where I leverage PyTorch to build and deploy robust models for various applications. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a passionate full-stack and AI developer specializing in building scalable, production-ready applications. I work extensively with React, Next.js, Node.js, Prisma, and modern databases like MongoDB and PostgreSQL. 
+Beyond full-stack development, I focus on AI, machine learning, and agentic systems—leveraging PyTorch, LangChain, LangGraph, and multi-agent workflows to create intelligent, automated solutions. My goal is to build impactful products that combine strong engineering, clean design, and practical AI to deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = ` am a dedicated and versatile full-stack developer with a passion for creating efficient and user-friendly web applications. I have worked with a variety of technologies, including React, Next.js, Node.js, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. My expertise also extends to the exciting fields of machine learning and deep learning, where I leverage PyTorch to build and deploy robust models for various applications. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+
+export const ABOUT_TEXT = `I am a dedicated and versatile full-stack developer currently in my third year of CSIT. I enjoy building efficient, user-centric applications using technologies like React, Next.js, Node.js, Prisma, and modern databases such as MongoDB and NeonDB. My interest in AI and automation has led me to build real-world ML and agentic systems using PyTorch, LangChain, LangGraph, and Google ADK—ranging from email-automation agents to RAG-based research tools and intelligent multi-agent planners. 
+I thrive in collaborative environments, enjoy solving complex engineering challenges, and constantly explore new technologies to expand my skill set. Outside of development, I like learning emerging AI tools, improving my projects, and contributing to meaningful tech communities.`;
+
+
 
 export const EDUCATION = [
   {
@@ -26,81 +28,58 @@ export const EDUCATION = [
 ];
 
 export const PROJECTS = [
+{
+  title: "RepoLens",
+  image: repolens,
+  link: "https://github.com/aakif-ms/RepoLens",
+  description:
+    "A conversational AI tool that lets developers explore and understand codebases using natural language. Paste a GitHub URL, and RepoLens scans the repository to answer questions about architecture, authentication, database schema, and more with context-aware responses.",
+  technologies: [
+    "Next.js",
+    "FastAPI",
+    "Python",
+    "LangGraph",
+    "LangChain",
+    "ChromaDB",
+  ]
+},
+{
+  title: "Sentinel",
+  image: sentinel,
+  link: "https://github.com/aakif-ms/Sentinel",
+  description:
+    "An AI-powered browser side panel that transforms everyday browsing into an intelligent workflow. Sentinel understands page context, answers questions, performs deep web research with source synthesis, and syncs structured insights directly to Notion—combining research, comprehension, and knowledge capture in one seamless flow.",
+  technologies: [
+    "JavaScript",
+    "FastAPI",
+    "Python",
+    "LangGraph",
+    "LangChain",
+    "ChromaDB",
+    "Tavily",
+    "RAG",
+    "Notion-API",
+  ]
+},
   {
     title: "MediMeet",
     image: medimeet,
     link: "https://github.com/aakif-ms/MediMeet",
-    description: "This web application streamlines the entire patient-doctor consultation process, from booking to payment, all within a single platform. Patients can easily find and book appointments with available doctors based on their schedules. Doctors have the flexibility to set their own availability and consultation times, and all appointments are conducted securely via a built-in video call feature. An integrated admin page provides comprehensive oversight, enabling administrators to manage doctor profiles, track appointments, and handle all payment processing efficiently. This system ensures a smooth, secure, and convenient experience for everyone involved.",
+    description:
+      "A doctor-patient consultation platform with appointment booking, real-time video calls, and secure payments. Includes dedicated dashboards for Admin, Doctors, and Patients to streamline end-to-end healthcare workflows.",
     technologies: ["NextJS", "Prisma", "NeonDB", "Vonage", "Clerk", "ShadCN"]
   },
   {
     title: "Whisper",
     image: whisper,
     link: "https://github.com/aakif-ms/Whisper",
-    description: "A secure, real-time messaging platform where users can connect and chat after sending & accepting friend requests. Made with React, NodeJs and used firebase authentication. Used Socket.IO for real time messaging. UI made using Tailwind CSS",
+    description:
+      "A secure real-time messaging platform with friend requests, authentication, and instant chat powered by Socket.IO. Designed with Firebase Auth and a clean Tailwind UI.",
     technologies: ["React", "NodeJS", "MongoDB", "Socket.IO", "Tailwind CSS"]
   },
-  {
-    title: "FoodVision",
-    image: foodvision,
-    link: "https://huggingface.co/spaces/aakif-47/Foodvision/tree/main",
-    description: "FoodVision a computer vision app that classifies images into 101 food categories using a powerful EfficientNetB2 model, trained on the Food101 dataset.",
-    technologies: ["PyTorch", "EfficientNetB2", "Gradio", "Hugging Face"]
-  },
-  {
-    title: "Echoes",
-    image: echoes,
-    link: "https://github.com/aakif-ms/Echoes",
-    description:
-      "A memory app where users can upload images, add descriptions, and preserve their cherished moments securely. Users can revisit their memories anytime, keeping them organized and easily accessible. Perfect for storing special experiences, milestones, and nostalgic moments in a digital format.",
-    technologies: [
-      "React",
-      "Tailwind",
-      "Framer Motion",
-      "Express",
-      "JWT",
-      "MongoDB",
-    ],
-  },
-  {
-    title: "YelpCamp",
-    image: yelpcamp,
-    link: "https://github.com/aakif-ms/YelpCamp",
-    description:
-      "YelpCamp simulates a platform where users can create, review, and manage campgrounds. Built with Node.js, Express, and MongoDB, YelpCamp incorporates features such as user authentication, form handling, and interactive maps.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Express",
-      "Node.js",
-      "MongoDB",
-    ],
-  },
-  {
-    title: "ToDo App",
-    image: todo,
-    link: "https://github.com/aakif-ms/Task-Master",
-    description:
-      "A fully functional todo app where people can create account and make their own todos",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Express",
-      "Node.js",
-      "MongoDB",
-    ],
-  },
-  {
-    title: "Weather App",
-    image: weather,
-    link: "https://github.com/aakif-ms/Weatherio",
-    description:
-      "A weather app made using openweather api which shows detailed weather information about location.",
-    technologies: ["HTML", "CSS", "React"],
-  }
+
 ];
+
 
 export const CONTACT = {
   email: "aakif.msiddiqui@gmail.com",
