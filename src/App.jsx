@@ -20,6 +20,15 @@ export default function App() {
         <Technologies />
         <Education />
         <Project />
+        <div className="my-16 flex justify-center">
+          <a
+            href="https://github.com/aakif-ms"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-cyan-400 px-6 py-3 font-semibold text-cyan-300 transition hover:bg-cyan-400 hover:text-neutral-900">
+            More Projects
+          </a>
+        </div>
         <Contact />
       </div>
     </div>

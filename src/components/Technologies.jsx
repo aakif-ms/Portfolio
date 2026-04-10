@@ -18,6 +18,24 @@ import { SiLanggraph } from "react-icons/si";
 import cpp from "../assets/cpp.svg";
 
 export default function Technologies() {
+  const technologies = [
+    { name: "Python", src: python, classes: "w-[70px]" },
+    { name: "C++", src: cpp, classes: "w-16" },
+    { name: "Javascript", src: js, classes: "w-16" },
+    { name: "React", icon: RiReactjsLine, classes: "text-7xl text-cyan-400" },
+    { name: "NextJS", src: nextjs, classes: "w-16" },
+    { name: "NodeJS", icon: FaNodeJs, classes: "text-7xl text-green-600" },
+    { name: "ExpressJS", icon: SiExpress, classes: "text-7xl " },
+    { name: "PyTorch", icon: SiPytorch, classes: "text-7xl text-orange-600" },
+    { name: "LangChain", icon: SiLangchain, classes: "text-7xl text-emerald-800" },
+    { name: "LangGraph", icon: SiLanggraph, classes: "text-7xl text-emerald-800" },
+    { name: "MongoDB", src: mongoDb, classes: "w-[70px]" },
+    { name: "PostgreSQL", icon: BiLogoPostgresql, classes: "text-7xl text-[#396c94] bg-white rounded-full" },
+  ];
+
+  const firstRowCount = Math.ceil(technologies.length * 0.7);
+  const firstRowTech = technologies.slice(0, firstRowCount);
+  const secondRowTech = technologies.slice(firstRowCount);
 
   return (
     <div className="border-b border-neutral-800 pb-24 ">
@@ -33,19 +51,29 @@ export default function Technologies() {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ x: -100, opacity: 0 }}
         transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4">
-        <TechComponent name="Python" src={python} classes="w-[70px]" />
-        <TechComponent name="C++" src={cpp} classes="w-16" />
-        <TechComponent name="Javascript" src={js} classes="w-16" />
-        <TechComponent name="React" icon={RiReactjsLine} classes="text-7xl text-cyan-400" />
-        <TechComponent name="NextJS" src={nextjs} classes="w-16" />
-        <TechComponent name="NodeJS" icon={FaNodeJs} classes="text-7xl text-green-600" />
-        <TechComponent name="ExpressJS" icon={SiExpress} classes="text-7xl " />
-        <TechComponent name="PyTorch" icon={SiPytorch} classes="text-7xl text-orange-600" />
-        <TechComponent name="LangChain" icon={SiLangchain} classes="text-7xl text-emerald-800"/>
-        <TechComponent name="LangGraph" icon={SiLanggraph} classes="text-7xl text-emerald-800"/>
-        <TechComponent name="MongoDB" src={mongoDb} classes="w-[70px]" />
-        <TechComponent name="PostgreSQL" icon={BiLogoPostgresql} classes="text-7xl text-[#396c94] bg-white rounded-full" />
+        className="flex flex-col items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {firstRowTech.map((tech) => (
+            <TechComponent
+              key={tech.name}
+              name={tech.name}
+              icon={tech.icon}
+              src={tech.src}
+              classes={tech.classes}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {secondRowTech.map((tech) => (
+            <TechComponent
+              key={tech.name}
+              name={tech.name}
+              icon={tech.icon}
+              src={tech.src}
+              classes={tech.classes}
+            />
+          ))}
+        </div>
       </motion.div>
     </div>
   );
